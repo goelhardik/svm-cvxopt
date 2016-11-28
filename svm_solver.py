@@ -36,8 +36,8 @@ def plot_data_with_labels(x, y, ax):
         ax.scatter(x_sub[:, 0], x_sub[:, 1], c = COLORS[li])
 
 def plot_separator(ax, w, b):
-    slope = -w[1] / w[0]
-    intercept = np.sqrt(1 + slope ** 2) * np.abs(b)
+    slope = -w[0] / w[1]
+    intercept = -b / w[1]
     x = np.arange(0, 6)
     ax.plot(x, x * slope + intercept, 'k-')
 
